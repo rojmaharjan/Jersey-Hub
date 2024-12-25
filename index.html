@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jersey Hub - Premium Sports Jerseys</title>
+    <link rel="shortcut icon" href="./public/jlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" >
+        <div class="nav-brand" id="navbar">Jersey Hub</div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <form class="form">
+             <button>
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+              <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+            </button>
+         <input class="input" placeholder="Search" required="" type="text">
+            <button class="reset" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+            </button>
+        </form>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#cart" class="cart-icon">Cart<sub><span id="cart-count">0</span></sub></a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="slider">
+            <div class="slide active">
+                <img src="./public/photofootball.jpg" alt="Football Jersey Collection">
+                <div class="slide-content">
+                    <h1>Premium Football Jerseys</h1>
+                    <h5>Get your favorite team's jersey today</h5>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./public/photobasketbal.jpg" alt="Basketball Jersey Collection">
+                <div class="slide-content">
+                    <h1>Basketball Collection</h1>
+                    <h5>Rep your team with style</h5>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./public/photocricket.jpg" alt="Cricket Jersey Collection">
+                <div class="slide-content">
+                    <h1>Cricket Collection</h1>
+                    <h5>Wear Your Passion, Play Like a Champion</h5>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots"></div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <h2>Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzmatzPNAVOTVylPZ_UNeCm3pbewGqi8FRg&s" alt="Football">
+                <h3><a href="#featured">Football</a></h3>
+            </div>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=800" alt="Basketball">
+                <h3><a href="#featured">Basketball</a></h3>
+            </div>
+            <div class="category-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW2wYqwBccKdU0LTqG2yVVCSI8Zb9bTLHEgw&s" alt="Cricket">
+                <h3><a href="#featured">Cricket</a></h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured" id="featured">
+        <h2>Featured Products</h2>
+        <div class="products-grid" id="products-container">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="total">
+                    Total: $<span id="cart-total">0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <div class="slogan">
+        <h1>Get in the Game with Jerseys from <span style="color: #2563EB;">Jersey Hub</span> <i class="fa-solid fa-shop"></i></h1>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Jersey hub often offer a wide selection of jerseys for different seasons, teams, and individual players.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@jerseyhub.com</p>
+                <p>Phone: +977-9865214578</p>
+                <p>Address: Kathmandu, Nepal</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jersey Hub <i class="fa-solid fa-shop"></i> all rights reserved by Roj Maharjan.</p>
+        </div>
+    </footer>
+    
+    <a id="scroll-up" class="scroll-up" href="#home">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path fill="rgba(255,255,255,1)" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z">
+            </path>
+        </svg>
+    </a>
+
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
