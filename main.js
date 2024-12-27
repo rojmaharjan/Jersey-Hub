@@ -203,6 +203,38 @@ window.removeFromCart = function(productId) {
     cart = cart.filter(item => item.id !== productId);
     updateCart();
 };
+// cart model cross button
+document.addEventListener("DOMContentLoaded", () => {
+    const cartModal = document.getElementById("cart-modal");
+    const openCartBtn = document.getElementById("open-cart-btn");
+    const closeBtn = document.getElementById("close-btn");
+
+    // Function to show the modal
+    const showCartModal = () => {
+        cartModal.style.display = "block";
+    };
+
+    // Function to hide the modal
+    const hideCartModal = () => {
+        cartModal.style.display = "none";
+    };
+
+    // Event listener to open the modal
+    openCartBtn.addEventListener("click", showCartModal);
+
+    // Event listener to close the modal
+    closeBtn.addEventListener("click", hideCartModal);
+
+    // Optional: Close the modal when clicking outside the modal content
+    window.addEventListener("click", (event) => {
+        if (event.target === cartModal) {
+            hideCartModal();
+        }
+    });
+});
+
+
+
 
 // Initialize
 renderProducts();

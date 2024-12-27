@@ -37,7 +37,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#categories">Categories</a></li>
             <li><a href="#featured">Featured</a></li>
-            <li><a href="#cart" class="cart-icon">Cart<sub><span id="cart-count">0</span></sub></a></li>
+            <li><a href="#cart" class="cart-icon" id="open-cart-btn">Cart<sub><span id="cart-count">0</span></sub></a></li>
         </ul>
     </nav>
 
@@ -75,15 +75,15 @@
         <div class="category-grid">
             <div class="category-card">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzmatzPNAVOTVylPZ_UNeCm3pbewGqi8FRg&s" alt="Football">
-                <h3><a href="#featured">Football</a></h3>
+                <h3><a href="Football.html">Football</a></h3>
             </div>
             <div class="category-card">
                 <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=800" alt="Basketball">
-                <h3><a href="#featured">Basketball</a></h3>
+                <h3><a href="Basketball.html">Basketball</a></h3>
             </div>
             <div class="category-card">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW2wYqwBccKdU0LTqG2yVVCSI8Zb9bTLHEgw&s" alt="Cricket">
-                <h3><a href="#featured">Cricket</a></h3>
+                <h3><a href="Cricket.html">Cricket</a></h3>
             </div>
         </div>
     </section>
@@ -99,7 +99,10 @@
     <!-- Cart Modal -->
     <div class="cart-modal" id="cart-modal">
         <div class="cart-content">
-            <h2>Your Cart</h2>
+            <div class="head">
+                <h2>Your Cart</h2>
+            <span class="close-btn" id="close-btn">&times;</span>
+            </div>
             <div class="cart-items" id="cart-items">
                 <!-- Cart items will be dynamically added here -->
             </div>
@@ -112,8 +115,16 @@
         </div>
     </div>
     <div class="slogan">
-        <h1>Get in the Game with Jerseys from <span style="color: #2563EB;">Jersey Hub</span> <i class="fa-solid fa-shop"></i></h1>
+        <h1>Get in the Game with <span class="gradient-text">Jersey Hub</span> <i class="fa-solid fa-shop"></i></h1>
     </div>
+    
+    <style>
+        .gradient-text {
+            background-image: linear-gradient(90deg, #ff7eb3, #ff758c, #fc878c, #fcbecb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 
     <!-- Footer -->
     <footer class="footer">
