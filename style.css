@@ -36,7 +36,8 @@ body {
     z-index: 1000;
 }
 
-.nav-brand {
+
+.nav-brand a{
   font-size: 2rem;
   font-weight: bold;
   background: linear-gradient(90deg, #ff7eb3, #ff758c, #fc878c, #fcbecb);
@@ -44,8 +45,8 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
+  cursor: pointer;
 }
-
 .nav-menu {
     display: flex;
     list-style: none;
@@ -63,7 +64,6 @@ body {
     --width-of-input: 200px;
     --height-of-input: 40px;
     --border-height: 2px;
-    --input-bg: #868484;
     --border-color: #2f2ee9;
     --border-radius: 30px;
     --after-border-radius: 1px;
@@ -76,6 +76,7 @@ body {
     border-radius: var(--border-radius);
     transition: border-radius 0.5s ease;
     background: var(--input-bg,#fff);
+    border: 1px solid #868484;
   }
   /* styling of Input */
   .input {

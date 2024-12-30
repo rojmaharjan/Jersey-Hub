@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketball</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jersey Hub</title>
+    <link rel="stylesheet" href="/pages/Basketball.css">
 </head>
 <body>
     <div class="Container">
         <nav class="navbar" >
-            <div class="nav-brand" id="navbar">Jersey Hub</div>
+          <div class="nav-brand" id="navbar">
+            <a href="/">Jersey Hub</a>
+        </div>
             <button class="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -36,6 +38,31 @@
                 <li><a href="#cart" class="cart-icon" id="open-cart-btn">Cart<sub><span id="cart-count">0</span></sub></a></li>
             </ul>
         </nav>
+        <div id="app">
+          <div class="controls">
+            <div class="Jersey-name">
+              <h1>Basketball Jerseys</h1>
+            </div>
+            <div class="filter-group">
+              <label for="clubFilter">Filter by Club:</label>
+              <select id="clubFilter">
+                <option value="all">All Clubs</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="priceSort">Sort by Price:</label>
+              <select id="priceSort">
+                <option value="default">Default</option>
+                <option value="lowToHigh">Price: Low to High</option>
+                <option value="highToLow">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+            <div id="jerseyContainer" class="jersey-container">
+              
+            </div>
+          </div>
+          <script type="module" src="/pages/Basketball.js"></script>
     </div>
 </body>
 </html>
@@ -78,7 +105,7 @@ body {
     z-index: 1000;
 }
 
-.nav-brand {
+.nav-brand a{
   font-size: 2rem;
   font-weight: bold;
   background: linear-gradient(90deg, #ff7eb3, #ff758c, #fc878c, #fcbecb);
@@ -86,6 +113,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
+  cursor: pointer;
 }
 
 .nav-menu {
@@ -105,7 +133,6 @@ body {
     --width-of-input: 200px;
     --height-of-input: 40px;
     --border-height: 2px;
-    --input-bg: #868484;
     --border-color: #2f2ee9;
     --border-radius: 30px;
     --after-border-radius: 1px;
@@ -118,6 +145,7 @@ body {
     border-radius: var(--border-radius);
     transition: border-radius 0.5s ease;
     background: var(--input-bg,#fff);
+    border: 1px solid #868484;
   }
   /* styling of Input */
   .input {
@@ -191,48 +219,65 @@ body {
     cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-    margin-top: 4rem;
-    height: 80vh;
-    position: relative;
-    overflow: hidden;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
 
-.slider {
-    height: 100%;
-    position: relative;
-}
+    .form{
+        display: none;
+    }
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 5px 0;
+        transition: var(--transition);
+    }
 
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--card-background);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-.slide.active {
-    opacity: 1;
-}
+    .nav-menu.active {
+        display: flex;
+    }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .hero {
+        height: 60vh;
+    }
 
-.slide-content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size:xx-large;
-    color: #D9DFC6;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-modal {
+        width: 100%;
+    }
 }
 </style>
+<script>
+  // Select the elements for the hamburger and the navigation menu
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  // Add an event listener to toggle the navigation menu when the hamburger is clicked
+  hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+  });
+</script>

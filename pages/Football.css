@@ -1,0 +1,141 @@
+/* Base styles */
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #213547;
+    background-color: #f5f5f5;
+  }
+  
+
+  
+  #app {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 80px;
+  }
+  
+/* Controls styles */
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .Jersey-name h1{
+    font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #fc878c, #fcbecb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  }
+  
+  select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  
+/* Jersey grid and card styles */
+.jersey-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  
+  .jersey-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .jersey-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .jersey-image {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .jersey-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  
+  .club-name {
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price {
+    font-weight: 600;
+    color: #2563eb;
+    font-size: 1.2rem;
+  }
+  .add-to-cart {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-to-cart:hover {
+    background-color: var(--secondary-color);
+}
+@media (min-width: 640px) {
+    #app {
+        padding: 2rem;
+      }
+    .controls {
+      flex-direction: row;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .filter-group {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    select {
+      width: auto;
+    }
+    .jersey-container {
+        gap: 2rem;
+      }
+  }
+  @media (max-width: 480px) {
+    .jersey-image {
+      height: 200px;
+    }
+  }
