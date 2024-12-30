@@ -152,8 +152,8 @@ body {
 
 /* Hero Section */
 .hero {
-    margin-top: 4rem;
     height: 80vh;
+    margin-top: 90px;
     position: relative;
     overflow: hidden;
 }
