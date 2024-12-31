@@ -202,6 +202,7 @@ function createJerseyCard(jersey) {
   `;
 }
 
+
 // Filter and sort jerseys
 function updateJerseys() {
   let filteredJerseys = [...jerseys];
