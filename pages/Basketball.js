@@ -102,15 +102,17 @@ const jerseys = [
   // Create jersey card
   function createJerseyCard(jersey) {
     return `
-      <div class="jersey-card">
-        <img src="${jersey.image}" alt="${jersey.name}" class="jersey-image">
-        <h3 class="jersey-name">${jersey.name}</h3>
-        <p class="club-name">${jersey.club}</p>
-        <p class="price">$${jersey.price}</p>
-        <button class="add-to-cart" onclick="addToCart(${jersey.id})">
-                      Add to Cart
-                  </button>
+    <div class="jersey-card">
+      <img src="${jersey.image}" alt="${jersey.name}" class="jersey-image">
+      <div class="jersey-info">
+      <h3 class="jersey-name">${jersey.name}</h3>
+      <p class="club-name">${jersey.club}</p>
+      <p class="price">$${jersey.price}</p>
+      <button class="add-to-cart" onclick="addToCart(${jersey.id})">
+          Add to Cart
+      </button>
       </div>
+    </div>
     `;
   }
   

@@ -198,6 +198,7 @@ body {
 /* Categories Section */
 .categories {
     padding: 4rem 2rem;
+    scroll-margin-top: 40px;
 }
 
 .category-grid {
@@ -242,6 +243,7 @@ body {
 .featured {
     padding: 4rem 2rem;
     background-color: var(--background-color);
+    scroll-margin-top: 40px;
 }
 
 .products-grid {
