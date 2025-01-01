@@ -1,6 +1,15 @@
 // Cart State
 let cart = [];
 
+// Load cart from local storage on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCart();
+    }
+});
+
 // DOM Elements
 const cartModal = document.getElementById('cart-modal');
 const cartIcon = document.querySelector('.cart-icon');
@@ -41,6 +50,9 @@ window.addToCart = function(productId) {
 
 // Update Cart
 function updateCart() {
+    // Save cart to local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
     // Update cart count
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCount.textContent = totalItems;
