@@ -281,6 +281,9 @@ body {
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
+.product-club{
+    margin-bottom: 0.5rem;
+}
 
 .product-price {
     color: var(--primary-color);

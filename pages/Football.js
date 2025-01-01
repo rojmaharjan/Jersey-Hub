@@ -170,7 +170,6 @@ const jerseys = [
     // }
   ];
   
-
 // Get DOM elements
 const jerseyContainer = document.getElementById('jerseyContainer');
 const clubFilter = document.getElementById('clubFilter');
@@ -202,7 +201,6 @@ function createJerseyCard(jersey) {
   `;
 }
 
-
 // Filter and sort jerseys
 function updateJerseys() {
   let filteredJerseys = [...jerseys];
@@ -229,3 +227,4 @@ priceSort.addEventListener('change', updateJerseys);
 
 // Initial render
 updateJerseys();
+

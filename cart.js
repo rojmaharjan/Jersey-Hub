@@ -51,6 +51,7 @@ function updateCart() {
             <img src="${item.image}" alt="${item.name}">
             <div class="cart-item-info">
                 <h4>${item.name}</h4>
+                <p>${item.club}</p>
                 <p>$${item.price} x ${item.quantity}</p>
                 <button onclick="removeFromCart(${item.id})">Remove</button>
             </div>
