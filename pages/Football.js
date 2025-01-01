@@ -193,13 +193,14 @@ function createJerseyCard(jersey) {
       <h3 class="jersey-name">${jersey.name}</h3>
       <p class="club-name">${jersey.club}</p>
       <p class="price">$${jersey.price}</p>
-      <button class="add-to-cart" onclick="addToCart(${jersey.id})">
+      <button class="add-to-cart" onclick="addToCart(${jersey.id}, 'jerseys')">
           Add to Cart
       </button>
       </div>
     </div>
   `;
 }
+
 
 // Filter and sort jerseys
 function updateJerseys() {
@@ -227,4 +228,3 @@ priceSort.addEventListener('change', updateJerseys);
 
 // Initial render
 updateJerseys();
-
