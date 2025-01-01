@@ -35,7 +35,7 @@
             <ul class="nav-menu">
               <li><a href="/">Home</a></li>
               <li class="dropdown">
-                  <a href="/index.html#categories">Categories</a>
+                  <a >Categories</a>
                   <ul class="dropdown-menu">
                       <li><a href="/pages/Football.html">Football</a></li>
                       <li><a href="/pages/Cricket.html">Cricket</a></li>
@@ -127,9 +127,9 @@ body {
     border: none;
     background: none;
     color: #010101;
-  }
+}
   /* styling of whole input container */
-  .form {
+.form {
     --timing: 0.3s;
     --width-of-input: 200px;
     --height-of-input: 40px;
@@ -147,9 +147,9 @@ body {
     transition: border-radius 0.5s ease;
     background: var(--input-bg,#fff);
     border: 1px solid #868484;
-  }
+}
   /* styling of Input */
-  .input {
+.input {
     font-size: 0.9rem;
     background-color: transparent;
     width: 100%;
@@ -157,9 +157,9 @@ body {
     padding-inline: 0.5em;
     padding-block: 0.7em;
     border: none;
-  }
+}
   /* styling of animated border */
-  .form:before {
+.form:before {
     content: "";
     position: absolute;
     background: var(--border-color);
@@ -171,43 +171,43 @@ body {
     bottom: 0;
     border-radius: 1px;
     transition: transform var(--timing) ease;
-  }
+}
   /* Hover on Input */
-  .form:focus-within {
+.form:focus-within {
     border-radius: var(--after-border-radius);
-  }
+}
   
-  input:focus {
+input:focus {
     outline: none;
-  }
+}
   /* here is code of animated border */
-  .form:focus-within:before {
+.form:focus-within:before {
     transform: scale(1);
-  }
+}
   /* styling of close button */
   /* == you can click the close button to remove text == */
-  .reset {
+.reset {
     border: none;
     background: none;
     opacity: 0;
     visibility: hidden;
-  }
+}
   /* close button shown when typing */
-  input:not(:placeholder-shown) ~ .reset {
+input:not(:placeholder-shown) ~ .reset {
     opacity: 1;
     visibility: visible;
-  }
+}
   /* sizing svg icons */
-  .form svg {
+.form svg {
     width: 17px;
     margin-top: 3px;
-  }
+}
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
     margin: 0;
-    padding: 0;
+    padding: 0
     align-items: center;
 }
 
