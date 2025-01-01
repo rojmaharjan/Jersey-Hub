@@ -145,9 +145,6 @@ function renderProducts() {
     `).join('');
 }
 
-
-
-
 // Initialize
 renderProducts();
 
