@@ -1,4 +1,5 @@
-const jerseys = [30
+const jerseys = [
+  
   {
     id: 301,
     name: "Home Kit 23/24",
