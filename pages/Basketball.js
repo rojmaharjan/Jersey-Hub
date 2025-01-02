@@ -1,62 +1,62 @@
 const jerseys = [
   {
-    id: 1,
+    id: 201,
     name: "Home Jersey 23/24", 
     club: "Los Angeles Lakers", 
     price: 99.99,
     image: "/image/Basketball/Los Angeles Lakers Home Jersey 2024.jpg" 
   },
   {
-    id: 2,
+    id: 202,
     name: "Home Jersey 23/24", 
     club: "Golden State Warriors", 
     price: 104.99,
     image: "/image/Basketball/Golden State Warriors Home Jersey 2024.jpg" 
   },
   {
-    id: 3,
+    id: 203,
     name: "Home Jersey 23/24", 
     club: "Boston Celtics", 
     price: 99.99,
     image: "/image/Basketball/Boston Celtics Home Jersey 2024.jpg" 
   },
   {
-    id: 4,
+    id: 204,
     name: "Away Jersey 23/24", 
     club: "Los Angeles Lakers", 
     price: 99.99,
     image: "/image/Basketball/Los Angeles Lakers Away Jersey 2024.jpg" 
   },
   {
-    id: 5,
+    id: 205,
     name: "Away Jersey 23/24", 
     club: "Golden State Warriors", 
     price: 104.99,
     image: "/image/Basketball/Golden State Warriors Away Jersey 2024.jpg" 
   },
   {
-    id: 6,
+    id: 206,
     name: "City Edition Jersey 23/24", 
     club: "Boston Celtics", 
     price: 119.99,
     image: "/image/Basketball/Boston Celtics City Edition Jersey 2024.jpg" 
   },
   {
-    id: 7,
+    id: 207,
     name: "Classic Jersey", 
     club: "Chicago Bulls", 
     price: 124.99,
     image: "/image/Basketball/Chicago Bulls Classic Jersey.jpg" 
   },
   {
-    id: 8,
+    id: 208,
     name: "Home Jersey 23/24", 
     club: "Brooklyn Nets", 
     price: 99.99,
     image: "/image/Basketball/Brooklyn Nets Home Jersey 2024.jpg" 
   },
   {
-    id: 9,
+    id: 209,
     name: "Home Jersey 23/24", 
     club: "Milwaukee Bucks", 
     price: 104.99,

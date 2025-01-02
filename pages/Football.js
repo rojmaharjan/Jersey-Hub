@@ -1,55 +1,55 @@
 const jerseys = [
     {
-      id: 1,
+      id: 101,
       name: "Home Kit 23/24",
       club: "FC Barcelona",
       price: 89.99,
       image: "/image/football/FCB 23 24 home kit.jpg"
     },
     {
-      id: 2,
+      id: 102,
       name: "Home Kit 23/24",
       club: "Real Madrid",
       price: 94.99,
       image: "/image/football/real madrid home kit 23 24.jpg"
     },
     {
-      id: 3,
+      id: 103,
       name: "Home Kit 23/24",
       club: "Atlético Madrid",
       price: 89.99,
       image: "/image/football/atletico madrid home kit 23 24.jpg"
     },
     {
-      id: 4,
+      id: 104,
       name: "Away Kit 23/24",
       club: "Sevilla FC",
       price: 89.99,
       image: "/image/football/sevilla home kit 23 24.jpg"
     },
     {
-      id: 5,
+      id: 105,
       name: "Away Kit 23/24",
       club: "Real Madrid",
       price: 94.99,
       image: "/image/football/real madrid away kit 23 24.jpg"
     },
     {
-      id: 6,
+      id: 106,
       name: "Third Kit 23/24",
       club: "Manchester United",
       price: 89.99,
       image: "/image/football/man utd third kit 24 25.jpg"
     },
     {
-      id: 7,
+      id: 107,
       name: "Home Kit 23/24",
       club: "Liverpool",
       price: 89.99,
       image: "/image/football/liverpool home kit 23 24.jpg"
     },
     {
-      id: 8,
+      id: 108,
       name: "Home Kit 23/24",
       club: "Arsenal",
       price: 94.99,
