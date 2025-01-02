@@ -15,26 +15,23 @@ cartIcon?.addEventListener('click', (e) => {
     cartModal?.classList.toggle('active');
 });
 
-// Close cart when clicking outside
-document.addEventListener('click', (e) => {
-    if (!cartModal.contains(e.target) && !cartIcon.contains(e.target)) {
-        cartModal.classList.remove('active');
-    }
-});
-document.addEventListener("DOMContentLoaded", () => {
-    loadCartFromLocalStorage();
-    const closeBtn = document.getElementById("close-btn");
-    if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            cartModal.classList.remove("active");
-        });
-    }
-});
-
 // Close cart on close button click
 closeBtn?.addEventListener("click", () => {
     cartModal?.classList.remove("active");
 });
+
+// Prevent clicks inside the cart modal from closing it
+cartModal?.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Close cart when clicking outside the cart modal
+document.addEventListener('click', (e) => {
+    if (cartModal?.classList.contains('active') && !cartModal.contains(e.target) && !cartIcon.contains(e.target)) {
+        cartModal?.classList.remove('active');
+    }
+});
+
 
 // Unified Add to Cart
 window.addToCart = function (itemId, source = 'main') {
@@ -76,8 +73,13 @@ function updateCart() {
             <div class="cart-item-info">
                 <h4>${item.name}</h4>
                 <p>${item.club}</p>
-                <p>$${item.price} x ${item.quantity}</p>
-                <button onclick="removeFromCart(${item.id}, '${item.source}')">Remove</button>
+                <p>
+                    $${item.price} x ${item.quantity} 
+                    <button onclick="decrementQuantity(${item.id})">-</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="incrementQuantity(${item.id})">+</button>
+                </p>
+                <button onclick="removeFromCart(${item.id})">Remove</button>
             </div>
         </div>
     `).join('');
@@ -90,9 +92,28 @@ function updateCart() {
     saveCartToLocalStorage();
 }
 
+// Increment item quantity
+function incrementQuantity(itemId) {
+    const item = cart.find(i => i.id === itemId);
+    if (item) {
+        item.quantity++;
+        updateCart(); // Re-render the cart
+    }
+}
+
+// Decrement item quantity
+function decrementQuantity(itemId) {
+    const item = cart.find(i => i.id === itemId);
+    if (item && item.quantity > 1) { // Ensure quantity doesn't go below 1
+        item.quantity--;
+        updateCart(); // Re-render the cart
+    }
+}
+
+
 // Remove from Cart
-window.removeFromCart = function (itemId, source) {
-    cart = cart.filter(item => item.id !== itemId || item.source !== source);
+window.removeFromCart = function (itemId) {
+    cart = cart.filter(item => item.id !== itemId );
     updateCart();
 };
 

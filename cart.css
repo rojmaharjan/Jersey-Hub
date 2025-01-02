@@ -6,7 +6,7 @@
     right: 0;
     width: 100%;
     max-width: 350px;
-    height: 75%;
+    height: 95%;
     background: var(--card-background);
     box-shadow: -2px 0 4px rgba(0,0,0,0.1);
     z-index: 1001;
@@ -58,6 +58,33 @@
     margin-top: auto;
     padding-top: 1rem;
 }
+.cart-item-info p button {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background-color: #007bff; /* Blue color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-info p button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.cart-item-info p span {
+    display: inline-block;
+    min-width: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Dark text for contrast */
+}
+
 
 .checkout-btn {
     margin-top: 10px;

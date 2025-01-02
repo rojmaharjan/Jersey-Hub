@@ -4,84 +4,63 @@ const jerseys = [
     name: "Home Jersey 23/24", 
     club: "Los Angeles Lakers", 
     price: 99.99,
-    image: "" 
+    image: "/image/Basketball/Los Angeles Lakers Home Jersey 2024.jpg" 
   },
   {
     id: 2,
     name: "Home Jersey 23/24", 
     club: "Golden State Warriors", 
     price: 104.99,
-    image: "" 
+    image: "/image/Basketball/Golden State Warriors Home Jersey 2024.jpg" 
   },
   {
     id: 3,
     name: "Home Jersey 23/24", 
     club: "Boston Celtics", 
     price: 99.99,
-    image: "" 
+    image: "/image/Basketball/Boston Celtics Home Jersey 2024.jpg" 
   },
   {
     id: 4,
     name: "Away Jersey 23/24", 
     club: "Los Angeles Lakers", 
     price: 99.99,
-    image: "" 
+    image: "/image/Basketball/Los Angeles Lakers Away Jersey 2024.jpg" 
   },
   {
     id: 5,
     name: "Away Jersey 23/24", 
     club: "Golden State Warriors", 
     price: 104.99,
-    image: "" 
+    image: "/image/Basketball/Golden State Warriors Away Jersey 2024.jpg" 
   },
   {
     id: 6,
     name: "City Edition Jersey 23/24", 
     club: "Boston Celtics", 
     price: 119.99,
-    image: "" 
+    image: "/image/Basketball/Boston Celtics City Edition Jersey 2024.jpg" 
   },
   {
     id: 7,
     name: "Classic Jersey", 
     club: "Chicago Bulls", 
     price: 124.99,
-    image: "" 
+    image: "/image/Basketball/Chicago Bulls Classic Jersey.jpg" 
   },
   {
     id: 8,
     name: "Home Jersey 23/24", 
     club: "Brooklyn Nets", 
     price: 99.99,
-    image: "" 
+    image: "/image/Basketball/Brooklyn Nets Home Jersey 2024.jpg" 
   },
   {
     id: 9,
     name: "Home Jersey 23/24", 
     club: "Milwaukee Bucks", 
     price: 104.99,
-    image: "" 
-  },
-  {
-    id: 10,
-    name: "Away Jersey 23/24", 
-    club: "Los Angeles Lakers", 
-    price: 99.99,
-    image: "" 
-  },
-  {
-    id: 11,
-    name: "Away Jersey 23/24", 
-    club: "Golden State Warriors", 
-    price: 104.99,
-    image: "" 
-  },
-  {
-    id: 12,
-    name: "City Edition Jersey 23/24", 
-    club: "Boston Celtics", 
-    price: 119.99,
-    image: "" 
+    image: "/image/Basketball/Milwaukee Bucks Home Jersey 2024.jpg" 
   }
 ];
   
