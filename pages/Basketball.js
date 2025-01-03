@@ -1,82 +1,29 @@
-const jerseys = [
-  {
-    id: 201,
-    name: "Home Jersey 23/24", 
-    club: "Los Angeles Lakers", 
-    price: 99.99,
-    image: "/image/Basketball/Los Angeles Lakers Home Jersey 2024.jpg" 
-  },
-  {
-    id: 202,
-    name: "Home Jersey 23/24", 
-    club: "Golden State Warriors", 
-    price: 104.99,
-    image: "/image/Basketball/Golden State Warriors Home Jersey 2024.jpg" 
-  },
-  {
-    id: 203,
-    name: "Home Jersey 23/24", 
-    club: "Boston Celtics", 
-    price: 99.99,
-    image: "/image/Basketball/Boston Celtics Home Jersey 2024.jpg" 
-  },
-  {
-    id: 204,
-    name: "Away Jersey 23/24", 
-    club: "Los Angeles Lakers", 
-    price: 99.99,
-    image: "/image/Basketball/Los Angeles Lakers Away Jersey 2024.jpg" 
-  },
-  {
-    id: 205,
-    name: "Away Jersey 23/24", 
-    club: "Golden State Warriors", 
-    price: 104.99,
-    image: "/image/Basketball/Golden State Warriors Away Jersey 2024.jpg" 
-  },
-  {
-    id: 206,
-    name: "City Edition Jersey 23/24", 
-    club: "Boston Celtics", 
-    price: 119.99,
-    image: "/image/Basketball/Boston Celtics City Edition Jersey 2024.jpg" 
-  },
-  {
-    id: 207,
-    name: "Classic Jersey", 
-    club: "Chicago Bulls", 
-    price: 124.99,
-    image: "/image/Basketball/Chicago Bulls Classic Jersey.jpg" 
-  },
-  {
-    id: 208,
-    name: "Home Jersey 23/24", 
-    club: "Brooklyn Nets", 
-    price: 99.99,
-    image: "/image/Basketball/Brooklyn Nets Home Jersey 2024.jpg" 
-  },
-  {
-    id: 209,
-    name: "Home Jersey 23/24", 
-    club: "Milwaukee Bucks", 
-    price: 104.99,
-    image: "/image/Basketball/Milwaukee Bucks Home Jersey 2024.jpg" 
-  }
-];
-  
-// Get DOM elements
 const jerseyContainer = document.getElementById('jerseyContainer');
 const clubFilter = document.getElementById('clubFilter');
 const priceSort = document.getElementById('priceSort');
 
-// Populate club filter options
-const clubs = [...new Set(jerseys.map(jersey => jersey.club))];
-clubs.forEach(club => {
-  const option = document.createElement('option');
-  option.value = club;
-  option.textContent = club;
-  clubFilter.appendChild(option);
-});
+// Fetch data from the db.json
+let jerseys = [];
+
+fetch('http://localhost:5501/Basketball')
+  .then(response => response.json())
+  .then(data => {
+    jerseys = data;
+    // Populate club filter options
+    const clubs = [...new Set(jerseys.map(jersey => jersey.club))];
+    clubs.forEach(club => {
+      const option = document.createElement('option');
+      option.value = club;
+      option.textContent = club;
+      clubFilter.appendChild(option);
+    });
+
+    // Initial render
+    updateJerseys();
+  })
+  .catch(error => {
+    console.error('Error fetching jerseys:', error);
+  });
 
 // Create jersey card
 function createJerseyCard(jersey) {
@@ -94,7 +41,6 @@ function createJerseyCard(jersey) {
     </div>
   `;
 }
-
 
 // Filter and sort jerseys
 function updateJerseys() {
@@ -119,6 +65,3 @@ function updateJerseys() {
 // Add event listeners
 clubFilter.addEventListener('change', updateJerseys);
 priceSort.addEventListener('change', updateJerseys);
-
-// Initial render
-updateJerseys();

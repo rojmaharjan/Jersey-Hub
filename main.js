@@ -1,116 +1,9 @@
-// Products Data
-const products = [
-    {
-        id: 1,
-        name: "Home Jersey 2024",
-        club: "FC Barcelona",
-        price: 79.99,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdZV2TUfR-fgVvFaHMOPXmeBUKsr5w4mtEZg&s"
-    },
-    {
-        id: 2,
-        name: "Home Jersey 2024",
-        club: "Real Madrid",
-        price: 69.99,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7dsKDv1VMhXNv_R7Bzz6crx8OCBd1SU_yg&s"
-    },
-    {
-        id: 3,
-        name: "Home Jersey 2024",
-        club: "Manchester United",
-        price: 89.99,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt4wGDlaLxNtmuEWWCeu9vslZjtOBY_4n7Uw&s"
-    },
-    {
-        id: 4,
-        name: "Home Jersey 2024",
-        club: "Chelsea",
-        price: 89.99,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExrGdxOH6KXOdx4J24ff3IuQDyANLNb2FnQ&s"
-    },
-    {
-        id: 5,
-        name: "Home Jersey 2024",
-        club: "Liverpool",
-        price: 79.99,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTbfDTLgyWS_Q3LqznwHfg8McqIJzmOra5Q&s"
-    },
-    {
-        id: 6,
-        name: "Home Jersey 2024",
-        club: "Los Angeles Lakers",
-        price: 69.99,
-        image: "./public/Los Angeles Lakers Home Jersey 2024.jpg"
-    },
-    {
-        id: 7,
-        name: "Home Jersey 2024",
-        club: "Golden State Warriors",
-        price: 69.99,
-        image: "./public/Golden State Warriors Home Jersey 2024.jpg"
-    },
-    {
-        id: 8,
-        name: "Home Basketball Jersey",
-        club: "Miami Heat",
-        price: 89.99,
-        image: "./public/Miami Heat Basketball Jersey.jpg"
-    },
-    {
-        id: 9,
-        name: "Home Basketball Jersey",
-        club: "LA Lakers",
-        price: 79.99,
-        image: "./public/LA Lakers Basketball Jersey.jpg"
-    },
-    {
-        id: 10,
-        name: "Home Jersey 2024",
-        club: "New York Knicks",
-        price: 69.99,
-        image: "./public/New York Knicks Home Jersey 2024.jpg"
-    },
-    {
-        id: 11,
-        name: 'Home Cricket Jersey 2024',
-        club: 'India',
-        price: 11.99,
-        image: "./public/India Home Jersey 2024.jpg"
-    },
-    {
-        id: 12,
-        name: 'Home Cricket Jersey 2024',
-        club: 'Australia',
-        price: 11.99,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTcroBKuf0sGZGKzHKC-pltDUB5xU7IZHB4A&s'
-    },
-    {
-        id: 13,
-        name: 'Home football Jersey 2024',
-        club: 'England',
-        price: 11.99,
-        image: "./public/England Home Jersey 2024.jpg"
-    },
-    {
-        id: 14,
-        name: 'Home Cricket Jersey 2024',
-        club: 'Pakistan',
-        price: 11.99,
-        image: "./public/Pakistan Home Jersey 2024.jpg"
-    },
-    {
-        id: 15,
-        name: 'Home Cricket Jersey 2024',
-        club: 'New Zealand',
-        price: 11.99,
-        image: "./public/New Zealand Home Jersey 2024.jpg"
-    }
-];
-
 // DOM Elements
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const productsContainer = document.getElementById('products-container');
+
+let products = [];
 
 // Toggle Mobile Menu
 hamburger.addEventListener('click', () => {
@@ -135,8 +28,19 @@ function nextSlide() {
 // Auto advance slides
 setInterval(nextSlide, 5000);
 
+// Fetch Products from JSON Server
+async function fetchProducts() {
+    try {
+        const response = await fetch('http://localhost:5501/products');
+        products = await response.json(); 
+        renderProducts(products); 
+    } catch (error) {
+        console.error('Error fetching products:', error);
+    }
+}
+
 // Render Products
-function renderProducts() {
+function renderProducts(products) {
     productsContainer.innerHTML = products.map(product => `
         <div class="product-card">
             <img src="${product.image}" alt="${product.name}" class="product-image">
@@ -153,10 +57,10 @@ function renderProducts() {
 }
 
 // Initialize
-renderProducts();
+fetchProducts();
 
- //scroll up js
- document.addEventListener('scroll', () => {
+// Scroll Up Feature
+document.addEventListener('scroll', () => {
     const scrollUpButton = document.querySelector('.scroll-up');
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     const triggerHeight = document.documentElement.scrollHeight * 0.3;

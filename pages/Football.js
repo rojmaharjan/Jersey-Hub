@@ -1,188 +1,29 @@
-const jerseys = [
-    {
-      id: 101,
-      name: "Home Kit 23/24",
-      club: "FC Barcelona",
-      price: 89.99,
-      image: "/image/football/FCB 23 24 home kit.jpg"
-    },
-    {
-      id: 102,
-      name: "Home Kit 23/24",
-      club: "Real Madrid",
-      price: 94.99,
-      image: "/image/football/real madrid home kit 23 24.jpg"
-    },
-    {
-      id: 103,
-      name: "Home Kit 23/24",
-      club: "Atlético Madrid",
-      price: 89.99,
-      image: "/image/football/atletico madrid home kit 23 24.jpg"
-    },
-    {
-      id: 104,
-      name: "Away Kit 23/24",
-      club: "Sevilla FC",
-      price: 89.99,
-      image: "/image/football/sevilla home kit 23 24.jpg"
-    },
-    {
-      id: 105,
-      name: "Away Kit 23/24",
-      club: "Real Madrid",
-      price: 94.99,
-      image: "/image/football/real madrid away kit 23 24.jpg"
-    },
-    {
-      id: 106,
-      name: "Third Kit 23/24",
-      club: "Manchester United",
-      price: 89.99,
-      image: "/image/football/man utd third kit 24 25.jpg"
-    },
-    {
-      id: 107,
-      name: "Home Kit 23/24",
-      club: "Liverpool",
-      price: 89.99,
-      image: "/image/football/liverpool home kit 23 24.jpg"
-    },
-    {
-      id: 108,
-      name: "Home Kit 23/24",
-      club: "Arsenal",
-      price: 94.99,
-      image: "/image/football/arsenal home kit 23 24.jpg"
-    }
-    // ,
-    // {
-    //   id: 9,
-    //   name: "Home Kit 23/24",
-    //   club: "Manchester City",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 10,
-    //   name: "Away Kit 23/24",
-    //   club: "Chelsea",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 11,
-    //   name: "Away Kit 23/24",
-    //   club: "Juventus",
-    //   price: 94.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 12,
-    //   name: "Third Kit 23/24",
-    //   club: "Inter Milan",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 13,
-    //   name: "Home Kit 23/24",
-    //   club: "AC Milan",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 14,
-    //   name: "Home Kit 23/24",
-    //   club: "Bayern Munich",
-    //   price: 94.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 15,
-    //   name: "Away Kit 23/24",
-    //   club: "Borussia Dortmund",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 16,
-    //   name: "Third Kit 23/24",
-    //   club: "Paris Saint-Germain",
-    //   price: 94.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 17,
-    //   name: "Home Kit 23/24",
-    //   club: "Ajax",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 18,
-    //   name: "Home Kit 23/24",
-    //   club: "Tottenham Hotspur",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 19,
-    //   name: "Home Kit 23/24",
-    //   club: "Napoli",
-    //   price: 94.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 20,
-    //   name: "Away Kit 23/24",
-    //   club: "RB Leipzig",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 21,
-    //   name: "Away Kit 23/24",
-    //   club: "AS Roma",
-    //   price: 94.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 22,
-    //   name: "Third Kit 23/24",
-    //   club: "Lazio",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 23,
-    //   name: "Home Kit 23/24",
-    //   club: "Benfica",
-    //   price: 89.99,
-    //   image: "/image/football/.jpg"
-    // },
-    // {
-    //   id: 24,
-    //   name: "Home Kit 23/24",
-    //   club: "Porto",
-    //   price: 94.99,
-    //   image: "/image/football/.jpg"
-    // }
-  ];
-  
-// Get DOM elements
 const jerseyContainer = document.getElementById('jerseyContainer');
 const clubFilter = document.getElementById('clubFilter');
 const priceSort = document.getElementById('priceSort');
 
-// Populate club filter options
-const clubs = [...new Set(jerseys.map(jersey => jersey.club))];
-clubs.forEach(club => {
-  const option = document.createElement('option');
-  option.value = club;
-  option.textContent = club;
-  clubFilter.appendChild(option);
-});
+// Fetch data from the db.json
+let jerseys = [];
+
+fetch('http://localhost:5501/Football')
+  .then(response => response.json())
+  .then(data => {
+    jerseys = data;
+    // Populate club filter options
+    const clubs = [...new Set(jerseys.map(jersey => jersey.club))];
+    clubs.forEach(club => {
+      const option = document.createElement('option');
+      option.value = club;
+      option.textContent = club;
+      clubFilter.appendChild(option);
+    });
+
+    // Initial render
+    updateJerseys();
+  })
+  .catch(error => {
+    console.error('Error fetching jerseys:', error);
+  });
 
 // Create jersey card
 function createJerseyCard(jersey) {
@@ -200,7 +41,6 @@ function createJerseyCard(jersey) {
     </div>
   `;
 }
-
 
 // Filter and sort jerseys
 function updateJerseys() {
@@ -225,6 +65,3 @@ function updateJerseys() {
 // Add event listeners
 clubFilter.addEventListener('change', updateJerseys);
 priceSort.addEventListener('change', updateJerseys);
-
-// Initial render
-updateJerseys();

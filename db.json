@@ -1,0 +1,319 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Home Jersey 2024",
+        "club": "FC Barcelona",
+        "price": 79.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdZV2TUfR-fgVvFaHMOPXmeBUKsr5w4mtEZg&s"
+      },
+      {
+        "id": 2,
+        "name": "Home Jersey 2024",
+        "club": "Real Madrid",
+        "price": 69.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7dsKDv1VMhXNv_R7Bzz6crx8OCBd1SU_yg&s"
+      },
+      {
+        "id": 3,
+        "name": "Home Jersey 2024",
+        "club": "Manchester United",
+        "price": 89.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt4wGDlaLxNtmuEWWCeu9vslZjtOBY_4n7Uw&s"
+      },
+      {
+        "id": 4,
+        "name": "Home Jersey 2024",
+        "club": "Chelsea",
+        "price": 89.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExrGdxOH6KXOdx4J24ff3IuQDyANLNb2FnQ&s"
+      },
+      {
+        "id": 5,
+        "name": "Home Jersey 2024",
+        "club": "Liverpool",
+        "price": 79.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTbfDTLgyWS_Q3LqznwHfg8McqIJzmOra5Q&s"
+      },
+      {
+        "id": 6,
+        "name": "Home Jersey 2024",
+        "club": "Los Angeles Lakers",
+        "price": 69.99,
+        "image": "./public/Los Angeles Lakers Home Jersey 2024.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Home Jersey 2024",
+        "club": "Golden State Warriors",
+        "price": 69.99,
+        "image": "./public/Golden State Warriors Home Jersey 2024.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Home Basketball Jersey",
+        "club": "Miami Heat",
+        "price": 89.99,
+        "image": "./public/Miami Heat Basketball Jersey.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Home Basketball Jersey",
+        "club": "LA Lakers",
+        "price": 79.99,
+        "image": "./public/LA Lakers Basketball Jersey.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Home Jersey 2024",
+        "club": "New York Knicks",
+        "price": 69.99,
+        "image": "./public/New York Knicks Home Jersey 2024.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Home Cricket Jersey 2024",
+        "club": "India",
+        "price": 11.99,
+        "image": "./public/India Home Jersey 2024.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Home Cricket Jersey 2024",
+        "club": "Australia",
+        "price": 11.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTcroBKuf0sGZGKzHKC-pltDUB5xU7IZHB4A&s"
+      },
+      {
+        "id": 13,
+        "name": "Home football Jersey 2024",
+        "club": "England",
+        "price": 11.99,
+        "image": "./public/England Home Jersey 2024.jpg"
+      },
+      {
+        "id": 14,
+        "name": "Home Cricket Jersey 2024",
+        "club": "Pakistan",
+        "price": 11.99,
+        "image": "./public/Pakistan Home Jersey 2024.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Home Cricket Jersey 2024",
+        "club": "New Zealand",
+        "price": 11.99,
+        "image": "./public/New Zealand Home Jersey 2024.jpg"
+      }
+    ],
+    "Football": [
+            {
+              "id": 101,
+              "name": "Home Kit 23/24",
+              "club": "FC Barcelona",
+              "price": 89.99,
+              "image": "/image/football/FCB 23 24 home kit.jpg"
+            },
+            {
+              "id": 102,
+              "name": "Home Kit 23/24",
+              "club": "Real Madrid",
+              "price": 94.99,
+              "image": "/image/football/real madrid home kit 23 24.jpg"
+            },
+            {
+              "id": 103,
+              "name": "Home Kit 23/24",
+              "club": "Atlético Madrid",
+              "price": 89.99,
+              "image": "/image/football/atletico madrid home kit 23 24.jpg"
+            },
+            {
+              "id":  104,
+              "name": "Away Kit 23/24",
+              "club": "Sevilla FC",
+              "price": 89.99,
+              "image": "/image/football/sevilla home kit 23 24.jpg"
+            },
+            {
+              "id": 105,
+              "name": "Away Kit 23/24",
+              "club": "Real Madrid",
+              "price": 94.99,
+              "image": "/image/football/real madrid away kit 23 24.jpg"
+            },
+            {
+              "id": 106,
+              "name": "Third Kit 23/24",
+              "club": "Manchester United",
+              "price": 89.99,
+              "image": "/image/football/man utd third kit 24 25.jpg"
+            },
+            {
+              "id": 107,
+              "name": "Home Kit 23/24",
+              "club": "Liverpool",
+              "price": 89.99,
+              "image": "/image/football/liverpool home kit 23 24.jpg"
+            },
+            {
+              "id": 108,
+              "name": "Home Kit 23/24",
+              "club": "Arsenal",
+              "price": 94.99,
+              "image": "/image/football/arsenal home kit 23 24.jpg"
+            }
+    ],
+    "Basketball": [
+        {
+            "id": 201,
+            "name": "Home Jersey 23/24",
+            "club": "Los Angeles Lakers",
+            "price": 99.99,
+            "image": "/image/Basketball/Los Angeles Lakers Home Jersey 2024.jpg"
+          },
+          {
+            "id": 202,
+            "name": "Home Jersey 23/24",
+            "club": "Golden State Warriors",
+            "price": 104.99,
+            "image": "/image/Basketball/Golden State Warriors Home Jersey 2024.jpg"
+          },
+          {
+            "id": 203,
+            "name": "Home Jersey 23/24",
+            "club": "Boston Celtics",
+            "price": 99.99,
+            "image": "/image/Basketball/Boston Celtics Home Jersey 2024.jpg"
+          },
+          {
+            "id": 204,
+            "name": "Away Jersey 23/24",
+            "club": "Los Angeles Lakers",
+            "price": 99.99,
+            "image": "/image/Basketball/Los Angeles Lakers Away Jersey 2024.jpg"
+          },
+          {
+            "id": 205,
+            "name": "Away Jersey 23/24",
+            "club": "Golden State Warriors",
+            "price": 104.99,
+            "image": "/image/Basketball/Golden State Warriors Away Jersey 2024.jpg"
+          },
+          {
+            "id": 206,
+            "name": "City Edition Jersey 23/24",
+            "club": "Boston Celtics",
+            "price": 119.99,
+            "image": "/image/Basketball/Boston Celtics City Edition Jersey 2024.jpg"
+          },
+          {
+            "id": 207,
+            "name": "Classic Jersey",
+            "club": "Chicago Bulls",
+            "price": 124.99,
+            "image": "/image/Basketball/Chicago Bulls Classic Jersey.jpg"
+          },
+          {
+            "id": 208,
+            "name": "Home Jersey 23/24",
+            "club": "Brooklyn Nets",
+            "price": 99.99,
+            "image": "/image/Basketball/Brooklyn Nets Home Jersey 2024.jpg"
+          },
+          {
+            "id": 209,
+            "name": "Home Jersey 23/24",
+            "club": "Milwaukee Bucks",
+            "price": 104.99,
+            "image": "/image/Basketball/Milwaukee Bucks Home Jersey 2024.jpg"
+          }
+    ],
+    "Cricket": [
+        {
+            "id": 301,
+            "name": "Home Kit 23/24",
+            "club": "India",
+            "price": 89.99,
+            "image": "/image/Cricket/Indian Cricket Home Jersey 2024.jpg"
+          },
+          {
+            "id": 302,
+            "name": "Home Kit 23/24",
+            "club": "Australia",
+            "price": 94.99,
+            "image": "/image/Cricket/Australia Cricket Home Jersey 2024.webp"
+          },
+          {
+            "id": 303,
+            "name": "Home Kit 23/24",
+            "club": "England",
+            "price": 89.99,
+            "image": "/image/Cricket/England Cricket Home Jersey 2024.webp"
+          },
+          {
+            "id": 304,
+            "name": "Home Kit 23/24",
+            "club": "South Africa",
+            "price": 89.99,
+            "image": "/image/Cricket/South Africa Cricket Away Jersey 2024.jpg"
+          },
+          {
+            "id": 305,
+            "name": "Home Kit 23/24",
+            "club": "New Zealand",
+            "price": 94.99,
+            "image": "/image/Cricket/New Zealand Cricket Away Jersey 2024.jpg"
+          },
+          {
+            "id": 306,
+            "name": "Home Kit 23/24",
+            "club": "Pakistan",
+            "price": 89.99,
+            "image": "/image/Cricket/Pakistan Cricket Third Jersey 2024.jpg"
+          },
+          {
+            "id": 307,
+            "name": "Home Kit 23/24",
+            "club": "Sri Lanka",
+            "price": 89.99,
+            "image": "/image/Cricket/Sri Lanka Cricket Home Jersey 2024.jpg"
+          },
+          {
+            "id": 308,
+            "name": "Home Kit 23/24",
+            "club": "Nepal",
+            "price": 94.99,
+            "image": "/image/Cricket/Nepal Cricket Home Jersey 2024.jpg"
+          },
+          {
+            "id": 309,
+            "name": "Home Kit 23/24",
+            "club": "Afghanistan",
+            "price": 89.99,
+            "image": "/image/Cricket/Afghanistan Cricket Home Jersey 2024.jpg"
+          },
+          {
+            "id": 310,
+            "name": "Home Kit 23/24",
+            "club": "Bangladesh",
+            "price": 89.99,
+            "image": "/image/Cricket/Bangladesh Cricket Away Jersey 2024.jpg"
+          },
+          {
+            "id": 311,
+            "name": "Home Kit 23/24",
+            "club": "China",
+            "price": 89.99,
+            "image": "/image/Cricket/China Cricket Third Jersey 2024.jpg"
+          },
+          {
+            "id": 312,
+            "name": "Home Kit 23/24",
+            "club": "West Indies",
+            "price": 89.99,
+            "image": "/image/Cricket/West Indies  Cricket Third Jersey 2024.jpg"
+          }
+    ]
+  }
+  

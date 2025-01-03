@@ -32,11 +32,11 @@ document.addEventListener('click', (e) => {
     }
 });
 
-
 // Unified Add to Cart
 window.addToCart = function (itemId, source = 'main') {
-    // Determine the source dataset (either `products` or `jerseys`)
-    const dataset = source === 'main' ? products : jerseys;
+    // Fetch products from global or imported data
+    // Assuming you are fetching products from your local JSON
+    const dataset = source === 'main' ? products : jerseys; // replace with the actual products array
     const item = dataset.find(p => p.id === itemId);
 
     if (!item) {
@@ -44,6 +44,7 @@ window.addToCart = function (itemId, source = 'main') {
         return;
     }
 
+    // Add item to the cart or update quantity if already added
     const existingItem = cart.find(cartItem => cartItem.id === itemId && cartItem.source === source);
 
     if (existingItem) {
@@ -52,7 +53,7 @@ window.addToCart = function (itemId, source = 'main') {
         cart.push({
             ...item,
             quantity: 1,
-            source // Add a source identifier to differentiate items
+            source // To differentiate between different sources
         });
     }
 
@@ -60,13 +61,13 @@ window.addToCart = function (itemId, source = 'main') {
     cartModal?.classList.add('active');
 };
 
-// Update Cart
+// Update Cart UI
 function updateCart() {
-    // Update cart count
+    // Update cart item count
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCount.textContent = totalItems;
 
-    // Update cart items display
+    // Update cart items in the modal
     cartItemsContainer.innerHTML = cart.map(item => `
         <div class="cart-item">
             <img src="${item.image}" alt="${item.name}">
@@ -84,11 +85,11 @@ function updateCart() {
         </div>
     `).join('');
 
-    // Update total
+    // Update the cart total price
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     cartTotal.textContent = total.toFixed(2);
 
-    // Save cart to localStorage
+    // Save cart to local storage
     saveCartToLocalStorage();
 }
 
@@ -97,32 +98,31 @@ function incrementQuantity(itemId) {
     const item = cart.find(i => i.id === itemId);
     if (item) {
         item.quantity++;
-        updateCart(); // Re-render the cart
+        updateCart();
     }
 }
 
 // Decrement item quantity
 function decrementQuantity(itemId) {
     const item = cart.find(i => i.id === itemId);
-    if (item && item.quantity > 1) { // Ensure quantity doesn't go below 1
+    if (item && item.quantity > 1) {
         item.quantity--;
-        updateCart(); // Re-render the cart
+        updateCart();
     }
 }
 
-
 // Remove from Cart
 window.removeFromCart = function (itemId) {
-    cart = cart.filter(item => item.id !== itemId );
+    cart = cart.filter(item => item.id !== itemId);
     updateCart();
 };
 
-// Save Cart to Local Storage
+// Save cart to localStorage
 function saveCartToLocalStorage() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Load Cart from Local Storage
+// Load cart from localStorage
 function loadCartFromLocalStorage() {
     const storedCart = JSON.parse(localStorage.getItem('cart'));
     if (storedCart) {
